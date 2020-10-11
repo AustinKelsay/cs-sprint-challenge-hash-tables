@@ -2,8 +2,17 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    hashtable = {}
+    result =[]
 
+    for i in arrays:
+        for j in i:
+            if j not in hashtable:
+                hashtable[j] = 1
+            else:
+                hashtable[j] += 1
+                if hashtable[j] == len(arrays):
+                    result.append(j)
     return result
 
 
